@@ -9,7 +9,7 @@ import Teste from './components/novoComp.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <Teste />
+      <Teste batata="2"/>
       <HelloWorld msg="Olá mundo!" />
 
       <nav>

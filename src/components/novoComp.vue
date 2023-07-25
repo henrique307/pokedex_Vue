@@ -1,12 +1,24 @@
+<template>
+    <div v-if="batata">uma prop foi passada, seu valor é: {{ batata }}</div>
+    <ul v-for="poke in pokemons">
+        <li>{{ poke }}</li>
+    </ul>
+</template>
+
 <script setup lang="ts">
-    const ok: string = "teste"
+
+    let pokemons: Record<string, any> = []
 
     defineProps<{
         batata?: string
     }>()
-</script>
 
-<template>
-    <div v-if="batata">uma prop foi passada {{ batata }}</div>
-    <div>{{ ok }}</div>
-</template>
+    fetch("https://pokeapi.co/api/v2/pokemon/")
+        .then(res => res.json())
+        .then(json => {
+            json.results.map((pokemon:any) => {
+                pokemons.push(pokemon.name)
+            })
+        })
+
+</script>
