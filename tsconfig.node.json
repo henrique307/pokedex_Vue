@@ -8,8 +8,8 @@
     "playwright.config.*"
   ],
   "compilerOptions": {
+    "lib": ["ES6"],
     "composite": true,
-    "module": "ESNext",
     "types": ["node"]
   }
 }

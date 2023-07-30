@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+  import PokemonList from "../components/PokedexComponent.vue"
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <SearchBar />
+
+    <PokemonList />
   </main>
 </template>
