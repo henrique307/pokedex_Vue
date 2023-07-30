@@ -7,7 +7,6 @@
   <header>
 
     <div class="wrapper">
-
       <SearchBar />
 
       <PokemonList />
